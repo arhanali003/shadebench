@@ -1,0 +1,122 @@
+[
+  {
+    "seed": 0,
+    "initial_distance": 0.9508036759014947,
+    "optimized_distance": 0.16101327264907397,
+    "random_distance": 0.9527460413141654,
+    "linf": 0.03137254901960787,
+    "training": {
+      "clean": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      },
+      "random": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      },
+      "optimized": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      }
+    }
+  },
+  {
+    "seed": 1,
+    "initial_distance": 0.8471997329714076,
+    "optimized_distance": 0.046148618163232506,
+    "random_distance": 0.858561074044043,
+    "linf": 0.0313725490196079,
+    "training": {
+      "clean": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      },
+      "random": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      },
+      "optimized": {
+        "overall": 0.9,
+        "source_class": 0.975,
+        "target_class": 0.825
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "initial_distance": 0.7261824552300108,
+    "optimized_distance": 0.0055980773527525025,
+    "random_distance": 0.711052647988222,
+    "linf": 0.0313725490196079,
+    "training": {
+      "clean": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      },
+      "random": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      },
+      "optimized": {
+        "overall": 0.975,
+        "source_class": 1.0,
+        "target_class": 0.95
+      }
+    }
+  },
+  {
+    "seed": 3,
+    "initial_distance": 0.5736308416286862,
+    "optimized_distance": 0.00572719531090751,
+    "random_distance": 0.598625593519004,
+    "linf": 0.03137254901960784,
+    "training": {
+      "clean": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      },
+      "random": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      },
+      "optimized": {
+        "overall": 0.925,
+        "source_class": 1.0,
+        "target_class": 0.85
+      }
+    }
+  },
+  {
+    "seed": 4,
+    "initial_distance": 0.6336154412702054,
+    "optimized_distance": 0.005280294005344947,
+    "random_distance": 0.6577900170957875,
+    "linf": 0.0313725490196079,
+    "training": {
+      "clean": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      },
+      "random": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      },
+      "optimized": {
+        "overall": 1.0,
+        "source_class": 1.0,
+        "target_class": 1.0
+      }
+    }
+  }
+]

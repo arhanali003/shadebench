@@ -1,0 +1,242 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>Shadebench experiment</title><style>body{max-width:1000px;margin:48px auto;padding:24px;background:#f4f0e8;color:#222;font:17px system-ui}h1{font-size:48px}section{display:flex;flex-wrap:wrap;gap:24px}figure{margin:0}img{width:192px;image-rendering:pixelated}figcaption{padding:12px 0}pre{background:#fff;padding:24px;overflow:auto;font-size:13px}aside{border-left:4px solid #70694d;padding:16px}</style>
+<h1>Shadebench / experiment</h1><p>Read the result before trusting the effect.</p>
+<aside>Educational fixed-feature experiment. Not Nightshade, not diffusion-model validation, and not evidence that an artwork is protected. Larger displayed pixels are intentional.</aside><section><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAACcUlEQVR4nBXRWZLcRgwFQOABKBbZGtlfvo7ufxlFeNxN1oLFoStk8i+VWiHy9DDrP7/suvfz/V6FLYRipWTJV+WVL9VWo0VQopj29WgcBRsZfWC4LlojadMhW+UkXq3qc6N+1KR4+sqcJYqLmVrwh2lFJDcQU8c1cbEw543B7mtRsfCtgoRtfri+HMU5GxGGFDRfnKFg7nhn9mfdoKit3M9sIex15LK+mk1o1jg65p3/8TFxX0VHpb5VG9OeJ0pSd0CZ/+nDJ093F8n8V8ck1DdMWSpTLxu/1SRJdUqY9OKmmxo4LJD2ZNQXeXOnQ1btuiQt6ipshq1TdEWVd7dDb7cO/QzM5CcRXMvuxEWsqHmNpGNnkWwm2AGUMndeldS2kXlBp4qo/U0kEcC5dn6ayuOfTpXb1lOOjL3eTEcUlhfOHWnW35sTTYSbV2h+lc/Dcf1w9j/DLJ3loGUnPuSPayPzrfB5JlnBd2TMUtqQK47D9tQQDvAOzc2c510SvGJ8crifcUhuImCj9lOmV54tMpd0pvOQ1VJDJBK5kOflo8C7aZzFP+eQ5A9t1pUdctbh9yHpLGV0p7ih6Dn5yWo2UFRx8hplASprfd7WJ2Gl0fKdWCprcoE2pQxreTW6O/NZxtCjISrENP+ae+myOfcb9Ifyjs3MQeiLddPxvLRNpMqReyJCAZMKIjCCioLuxnYIVzRpLDhiZygbQIXCqBSvdctiZgolHyUrNNKRTbeBtYydqorLee+EquCp2DAr7KzSka/Ti78D6cKIUtkQ1adIQmi71aTeuvrg9uhjjqfz+IKq06lQsEtWPIGW2rgvWSYN43+Vht2PD9wzgQAAAABJRU5ErkJggg==" alt="source"><figcaption>source</figcaption></figure><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAClUlEQVR4nBWT247jNhAF+0pSkj2z3gD5uvx+EARZLDBjS5TY7O7A7/VShXPwL6GhaWtcqGbbbCPX3UU66nerNmV7MmWIpRziSYYT+ywArPzT8x6yLxnA5CQbLBw1UwagQ+IQyCdRyYsDB5m5j2sn5kENkuJCs0OJOojrUChFcpl6TV1lWAKWwNbkEu5cUsOyCL6SlnESsOfUJH/xABJBCpnL8rLaFHeMqIm80VBccDZxKD1pXlgmZ5R61GoyfSSfVoGBSikL2wPofgsIG5qjJImxE79dCTWy+BC7wnVhUm/HVKlQpxAeQJUGX4+hHwtSQKn0CL07ZedVKDeVzLoCf9QY+YCjDTwXxbvDcolhUZGqSY80Rf6j548gLXRogESzIogofz7vZ3OcfK7aP6i3c3wSJEIkAjjJ7R4bIXR9JKY1WVaTcgVHFjRxlJtOe4sw5MwNfnRBw9JeWkasiCEVrWgm0hV629mWva7p/vjmCgl0yrNkxKnRLoZrKgzZ6xB6lj4opZCM10dfnnT7Rz3jNfCc2GUECMQs1zfIi/4e2yhf687nv9tO5tlwIFjjaVpYfs9JA4/4nXW2X7fOEF+lHl5PJwQi6aDx32qibuWXfsUUzutKm/z9mQNZhrvToByOxr0ci43zIyadent+unTxa2Im7SgRGlMMZO0zQpzHSRkUUC1VBfcmXTKc5pTWlghqFieLidPilrOaL+6FTomMuSJkTKRJxaJd54lcj3ZkQA+PTpZUbRYYSKdIJKOLlQGtdoGMW287mi8M7b3JixMW7jgvGRdEgXiKrowlu3SmOGSP8nKl2MhR399bxTLn6atVoqZU8YkiJruhQ39zOYmoTQvEd3vVBlCs1htESzmTosxkrFYw/gfrg9eMkGj0LwAAAABJRU5ErkJggg==" alt="target"><figcaption>target</figcaption></figure><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAACyElEQVR4nBXSB5LbRhAAwEkbAZBH6pxf4v9/RtZJ4hFE2DS7Lj2hqxr/lfnklcJodRE/vXvu5w/46MmdoS5PT4joXr9fVMx7mKfpKKh7Z0ph98WXG9B9r/m+1ZRHg5IefbALzPXPttQrtG8npTfqB7c4QioygkR9Bcnxaxy0brsj6q4J4eldEcit4Y8+TqhJkjZl5k7SM1j9W4dBSIJs8+Cs0ZoEJrzBTK/sEehT5x2zFTu1IcZjum0cKFVWGnvdmiD85zNjSSnO2Hbl/4TqCNgvRG/nXNmB5D8WgZTto1hnlV/RjK78oMt5MZCfGM3+U/WW6yTfPci0tDLO4wlSnbZBoZvxWpjMUSfHH0+rrtXJVdcp4xR54v7oS4ap+qmnR7zUNNap9ZpP6tAe9XuFv0TnvL3uH5RuR3LIpOVYVKkqxveQRy+uXRd7wm6fZPutBBNd6pZCPrcffOOf58MlzXnijHnRT2grySAW0+zAzCpz/rY0Y03ROqXCHmGs4XKQvJ1eZEyUZ2amAdcvIe1mLdJkkdqJ+nUT3Y4yGvRNABKQ6f49n0DaEwp9X0g1IkBBFj0UWTe7IuLYs2+DVtf6hwEr6qxWsv43dldeeNbhcXCkcaCNhs7JYum2Cp5zeZKmHcZqKUUyFw09C1YW1NGfJ0GPA2hyL+ntcogUfM3ZbRKSC5ObQvm8FNW+1nsfNDbKUVIp9eY2Uv1pdNy/tOYV7yDGdrrTihTdl2SetdhKx1HPctpdzItb2myp9L5zG53LnbkH9MvIKLkkaR6JwatgHYAd7cfc52KTMaGYwaY07eChTPRranv8QtSjgjBnehnJijVP7RUbdZA8kUlQWRVfncoaWjbR2qg5nCe5mMID8jXuni3O/JUpp6myihebiGhVGT7az+2SWqWq/2SFacxnz7h5U4Q8pIZKgaoCjHwkITvDbo2sQFdT/ge2DuK1LLuCIwAAAABJRU5ErkJggg==" alt="random"><figcaption>random</figcaption></figure><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAADCUlEQVR4nAXBW5qjKBgAUPgBUVFQo0mq+uuZRfQKZv+7mIeqVCIa74pc+hz8nyHK6Iq2F92w2P9ePr/E9j81YRQEjQrDKj14EY8MiTTZ1KPU7u0hDFik3eiWCZpdungf44ymyMRd8UL8ctLpjrCJVM4iGrLWxvnEGPUHJQWkpUarw1+QGad9wegkihlSK7WYCF2nig/WpmvBqO/OXy54CmgwWV+0ecCyvxEkdhLAe4K7HEardqDW37lZq8iFs2YuWa5uwlmvfMr29MoOmJHat/t4rJ5gfrg17YsqdPSH0gi/X8cHVViTUsN8kn/aiNk8OVuYiDCDCYmBwcNC8WWWnn7yRzczkgRDj4tjZA/DQYVcAevG5XvDvVA5aq+tQ1w91avPS1+5YAKceGTPaKJGh5DFtuH1+m726gLP6kcO3ENeqicL8jQI12PYzMMz/vI9JgIjaHgFPR1wPJjIF+vZFNyGUR01ucwMv9HkNEBihFyieeLtvqPQicZ+KwsevRIKBc8DTS1AkjqKBND2U0LEo3PN1jQ+8tF6vkOaWWwd6uC87MXEkYEEM2Sf7bwWzJ6UWnfMlD2ZFVrqj14hD9S8LS03PJ+hcoBfSS3PsuySqCcaG/dY/J7Z2m1BeoRGOCvy2oKZP7skyr18kvvwTvilx3J3iGgJ3ozySDcbKizWWn/0WCYx8aVBYqhTv8OeqC1bb6pr8RQY+vKTZWNA38ewyX5lMRgU3DGYnTNXFT27xsm63H5QdfoFGSsWIPOUJjiMsUCexM0q06j4jjG+KzZAyRVQlU9L3f176Cc1y3G8ZjiUHbtVC1xS7QCZoT7ft28B0TFKSm5eoNG5GipGeldMkIwOhaJHX1fMOMHKrNNaEuDu7HKKFwAUqlA9nL+06rmS5zCX0tEie/ST0bWWGfXRzA2UxDJsm/6Wu+Dx+YqBhlBtwb1gacIoZB9o7H8l2YxHDdJeMOSBkldFavwnLrSjwWcLRfyeS97ueO/cVrWwM+kdpVmLk8xEBmfOBh3PcP0p6R4/mx92mTfyF0B25LdzHsB8AAAAAElFTkSuQmCC" alt="optimized"><figcaption>optimized</figcaption></figure></section><h2>Recorded measurements</h2><pre>{
+  &quot;schema_version&quot;: 1,
+  &quot;software&quot;: &quot;0.1.0&quot;,
+  &quot;seed&quot;: 0,
+  &quot;environment&quot;: {
+    &quot;python&quot;: &quot;3.9.6&quot;,
+    &quot;numpy&quot;: &quot;1.26.4&quot;,
+    &quot;pillow&quot;: &quot;11.3.0&quot;
+  },
+  &quot;scope&quot;: &quot;synthetic fixed-feature study; not diffusion or artist-protection validation&quot;,
+  &quot;parameters&quot;: {
+    &quot;epsilon_pixels&quot;: 8,
+    &quot;steps&quot;: 80,
+    &quot;size&quot;: 32,
+    &quot;features&quot;: 32
+  },
+  &quot;optimization&quot;: {
+    &quot;initial_loss&quot;: 0.9040276301077955,
+    &quot;final_loss&quot;: 0.025920078398301453,
+    &quot;history&quot;: [
+      0.9040276301077955,
+      0.08388966024120795,
+      0.05750862641964759,
+      0.0472005801448933,
+      0.04162662093136929,
+      0.03824391142429889,
+      0.03597509677554753,
+      0.03432504483954553,
+      0.03305759151151703,
+      0.0320261618704112,
+      0.03118733838653607,
+      0.03050443917818966,
+      0.029927817798989387,
+      0.02944061553038429,
+      0.02902429337026045,
+      0.028673214252720368,
+      0.02836895782013124,
+      0.028119123275486574,
+      0.02791049104047712,
+      0.027727432559762694,
+      0.027572603774881223,
+      0.027441245803534332,
+      0.027323763923845307,
+      0.027215969909017958,
+      0.027118993707543303,
+      0.027029824631362415,
+      0.026946507322379,
+      0.026873128908496913,
+      0.026807391413759422,
+      0.02674665189668634,
+      0.0266914104390422,
+      0.026643423673225183,
+      0.02659989081653888,
+      0.026560543716622816,
+      0.026524855615506424,
+      0.026492752409281402,
+      0.026461773781269453,
+      0.026433292820163774,
+      0.026406499789974062,
+      0.026381704433668628,
+      0.026359065973668862,
+      0.02633834701777128,
+      0.026318348529846085,
+      0.026298953270130255,
+      0.02628019900379939,
+      0.02626226078873793,
+      0.02624501148352279,
+      0.02622813775038882,
+      0.026211818053189825,
+      0.02619571585056199,
+      0.026180551889445056,
+      0.026165894918301423,
+      0.026151596991382822,
+      0.0261380451453897,
+      0.026125486652354472,
+      0.026113692524962557,
+      0.02610259042917531,
+      0.026091838342436884,
+      0.02608160010410693,
+      0.026071835011705416,
+      0.02606308597726477,
+      0.02605483747854126,
+      0.026046938147046037,
+      0.02603914369394429,
+      0.02603143802998889,
+      0.026023907199505102,
+      0.026016479163990615,
+      0.02600912166875563,
+      0.026001826029063126,
+      0.025994585029165972,
+      0.025987392608401737,
+      0.02598024362569596,
+      0.0259731336809436,
+      0.025966058977992944,
+      0.02595901752392819,
+      0.025952123484194435,
+      0.025945289142449833,
+      0.025938597799833908,
+      0.025932069451063557,
+      0.025925888202361982,
+      0.025920078398301453
+    ]
+  },
+  &quot;images&quot;: {
+    &quot;source&quot;: {
+      &quot;sha256&quot;: &quot;be4e0360b97a1b5370b7ba000ab5380a854074c5d83ad970eacf697279a7c3fa&quot;,
+      &quot;linf&quot;: 0.0,
+      &quot;rmse&quot;: 0.0,
+      &quot;psnr_db&quot;: null,
+      &quot;identical&quot;: true,
+      &quot;target_feature_distance&quot;: 0.9508036759014947
+    },
+    &quot;target&quot;: {
+      &quot;sha256&quot;: &quot;3fe10427979cdbcc69900c63057f8a1bc9d401a94d5feb7266364af04b563c2d&quot;,
+      &quot;linf&quot;: 0.41960784313725485,
+      &quot;rmse&quot;: 0.17055570211807752,
+      &quot;psnr_db&quot;: 15.362675128530148,
+      &quot;identical&quot;: false,
+      &quot;target_feature_distance&quot;: 0.0
+    },
+    &quot;random&quot;: {
+      &quot;sha256&quot;: &quot;d2e9fe1b2b7c9dd509a9bccd548814e6c2c583cc208927ff2c579cea8b8a9df0&quot;,
+      &quot;linf&quot;: 0.03137254901960787,
+      &quot;rmse&quot;: 0.0178610729184383,
+      &quot;psnr_db&quot;: 34.96184913004489,
+      &quot;identical&quot;: false,
+      &quot;target_feature_distance&quot;: 0.9527460413141654
+    },
+    &quot;optimized&quot;: {
+      &quot;sha256&quot;: &quot;d58f3ff492ca45fceafa0064e74c8e2383be721e5d13cc645a6be79dc2a0bce6&quot;,
+      &quot;linf&quot;: 0.03137254901960787,
+      &quot;rmse&quot;: 0.030610036929457636,
+      &quot;psnr_db&quot;: 30.28272292896151,
+      &quot;identical&quot;: false,
+      &quot;target_feature_distance&quot;: 0.16101327264907397
+    }
+  },
+  &quot;transformations&quot;: {
+    &quot;source&quot;: {
+      &quot;jpeg85&quot;: {
+        &quot;linf&quot;: 0.0392156862745098,
+        &quot;rmse&quot;: 0.012017929424123532,
+        &quot;psnr_db&quot;: 38.4034070146162,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.9555503826357679
+      },
+      &quot;resize_half&quot;: {
+        &quot;linf&quot;: 0.05882352941176472,
+        &quot;rmse&quot;: 0.014966040309743397,
+        &quot;psnr_db&quot;: 36.497861787530894,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.9246131825904069
+      },
+      &quot;median3&quot;: {
+        &quot;linf&quot;: 0.06274509803921569,
+        &quot;rmse&quot;: 0.013663528735040294,
+        &quot;psnr_db&quot;: 37.28874251053267,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.9386856668798499
+      }
+    },
+    &quot;random&quot;: {
+      &quot;jpeg85&quot;: {
+        &quot;linf&quot;: 0.05490196078431375,
+        &quot;rmse&quot;: 0.01949107387457945,
+        &quot;psnr_db&quot;: 34.203284649195886,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.9513007553129667
+      },
+      &quot;resize_half&quot;: {
+        &quot;linf&quot;: 0.07058823529411762,
+        &quot;rmse&quot;: 0.015231615625773869,
+        &quot;psnr_db&quot;: 36.34508056736384,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.9262652433293356
+      },
+      &quot;median3&quot;: {
+        &quot;linf&quot;: 0.07450980392156864,
+        &quot;rmse&quot;: 0.01618528800095851,
+        &quot;psnr_db&quot;: 35.81759136716298,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.9395973421376904
+      }
+    },
+    &quot;optimized&quot;: {
+      &quot;jpeg85&quot;: {
+        &quot;linf&quot;: 0.10980392156862742,
+        &quot;rmse&quot;: 0.0337072186739626,
+        &quot;psnr_db&quot;: 29.445541629725405,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.2646920394381758
+      },
+      &quot;resize_half&quot;: {
+        &quot;linf&quot;: 0.05882352941176472,
+        &quot;rmse&quot;: 0.0175527675645009,
+        &quot;psnr_db&quot;: 35.113087962047906,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.8294508062203294
+      },
+      &quot;median3&quot;: {
+        &quot;linf&quot;: 0.07058823529411767,
+        &quot;rmse&quot;: 0.02407581458923732,
+        &quot;psnr_db&quot;: 32.36838019777497,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.7572351044814349
+      }
+    }
+  },
+  &quot;limitations&quot;: [
+    &quot;Random linear encoder; no semantic pretrained model.&quot;,
+    &quot;No perceptual study; pixel bounds do not establish invisibility.&quot;,
+    &quot;Transformation distances do not prove training-time robustness.&quot;,
+    &quot;Single seed is not statistical evidence of generality.&quot;
+  ],
+  &quot;training&quot;: {
+    &quot;train_count&quot;: 32,
+    &quot;test_count&quot;: 80,
+    &quot;modified_count&quot;: 8,
+    &quot;labels_unchanged&quot;: true,
+    &quot;model&quot;: &quot;ridge classifier on fixed random features&quot;,
+    &quot;arms&quot;: {
+      &quot;clean&quot;: {
+        &quot;overall&quot;: 1.0,
+        &quot;source_class&quot;: 1.0,
+        &quot;target_class&quot;: 1.0
+      },
+      &quot;random&quot;: {
+        &quot;overall&quot;: 1.0,
+        &quot;source_class&quot;: 1.0,
+        &quot;target_class&quot;: 1.0
+      },
+      &quot;optimized&quot;: {
+        &quot;overall&quot;: 1.0,
+        &quot;source_class&quot;: 1.0,
+        &quot;target_class&quot;: 1.0
+      }
+    }
+  }
+}</pre></html>

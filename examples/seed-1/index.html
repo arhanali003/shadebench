@@ -1,0 +1,242 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>Shadebench experiment</title><style>body{max-width:1000px;margin:48px auto;padding:24px;background:#f4f0e8;color:#222;font:17px system-ui}h1{font-size:48px}section{display:flex;flex-wrap:wrap;gap:24px}figure{margin:0}img{width:192px;image-rendering:pixelated}figcaption{padding:12px 0}pre{background:#fff;padding:24px;overflow:auto;font-size:13px}aside{border-left:4px solid #70694d;padding:16px}</style>
+<h1>Shadebench / experiment</h1><p>Read the result before trusting the effect.</p>
+<aside>Educational fixed-feature experiment. Not Nightshade, not diffusion-model validation, and not evidence that an artwork is protected. Larger displayed pixels are intentional.</aside><section><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAACfElEQVR4nBXQSXLbSBAAwFp7ASk5/Kz5/x/mNhEjUwTQXZtDH8hD4j/pCogKx/j1eMxDHL7/Pe1txn9wbqB9c26vzUhOKkGQ92d3BPgGOhPIuxQ26rULMFahbEkaVDmsaBcJG4+0a2iyc9NdxbJeeMT1iBQgDLBtQu/GxfYDdDtpyB+J7FhFQkOKS8QWe7CAro9RtRObwsWLKM3mCMwiSYY7g7+2ECjh3sMGXVF6fykE01uwvIN1pALaUkUtCfU2oqq5Qc+nS1CBBJJrVpYJCXT10X8i/HhNTmlsWZm5hiYY5fJEDBQTpv6Fu3xxo2Bub9EOJNBKcUEe4BC/b2IIxFBmOFZ4IyDQMNrouy87Pz1G47XRlkNPcQqOolIBnPZgPGeuvfCDBrHDA5IgM2p6b4V6A1KAIkVEAIdvYDqwtTrNA7bLhWhjlR+GBAv7WkkL6xItVYd+4w7eHRoPDCZdU51SFu171hYwfswGmY/6Cubi976yEe2BMNfXgu/E6zQQevnRdgl05LkknCSq8UGjqusTzvx4uVsYZ4f7oIR1JaW/rSBc/7tvvIpEGr4pbnaCyaPSh46Ced8f9CzV/SdX2Al9Oy0pmUVmxgK/GWzl7vNJjPNg06B58pnYoNIAd21Jlm0WrioWeFAEhr3tki643LWeltQ71CkL++uk3pHll49y9GJ2cAJZd9PuLvoECktZJSwsJjeyELK3bp+QHcOeVLMbXhR1x8M6h1OnEIP/c1aeepLHNUbkrr5+xsTWG+XkgHkLaCjxhssHFzssaQwT8gbIgeCZwEFawhVr3jGlqt07Hsoa23EUkCO9JAVV0YqvoO8eft9uVJ+XAybpX5s130lD42UOAAAAAElFTkSuQmCC" alt="source"><figcaption>source</figcaption></figure><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAACiklEQVR4nBXPV45bRxAAwE4Tyd2FBAE+m+//aUD2ki9M6CC4blD4981IFwOOdj4RZpuOKHTm5Dj6VcgqwORMKPihKnkHczURBN/Zw2nfuJEiMskmJoqGbmREQWxYmYImCQAFnQn2dlkkyZTHKDMtvcg5yOsWBxAl4I0urHIUgroRmxA8bE4OjXKiaIjFtDI6lyORhAjvLaX4mae2WP3y4uEocFFdiVZQTk3wvgBKRm1bxNpC4fjEkecrkajGfqCcxOG8OcCNYOUSdWRwCwKJvQAqxJJp+9YCucq2jWAmGwRk/FTNIAlXlWCI8k5QwDbdj52RHD9wd9V1AQY0rihZwuFL6Es5iTQCbibdCR6bhpB7QWAe+JS+0eTBQzu9c9kBabakbXxBwXSloOhuglUC469QieikKUnKIcztYi6LtvwCFdrCCzw4QRg9FzWfTdrN7f6QIo5YtTbCs8PMNKw/r128kT2khPy6IRI5Y+wf+S6BHF+zPUlldwzrUupKMKCvKld80uzh2vv4uCkzz5QEsEHGZF8yPodGMq4eVv+/+pTcRIR18c6wyPrFRK8greYbKYnCEKYjEejJu9J3Cfa6MJ+cbSWNikP+Rc0uKx5rAx7syBiXzGu1u+g7uryy4kgwr7K1piOvvLJdZHbLd0L4LfedXojgOFeK4+hxjTZb5Et7nMWHvABJiT1OmFXln+Zra+wt4YavkmQZquzknkf6flqsDW+fDmI7OZ5N7ChwCDl/U8C3Q8jxY111FBOlgYf8LnP1+K8wzZGcgG4J5YlXGpyMphDsGIGzXRRorLr7ERpW1daKwrQPMwfESxQMzjn6ezMLWg1Sn0juwAIrxJDWXV1u8bcugFuEps8/pivP3jey/uQAAAAASUVORK5CYII=" alt="target"><figcaption>target</figcaption></figure><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAACw0lEQVR4nAXBB3YbNxQAwN9Qt4ikn5zn8+T+50iTvCS3oAOZwT8hWbZ0mdVp++Gt4rT/lUKmRCdyLYLkRz+HdEXAzASlhbnoK+nQYieiktxI4Ba9AToPybNMispHe0M3N/bk7h1vig5FrbSof5xcmqFxTvSG4xiR8hbgqIj9DgCR33jM5lKw7uzUT1eR1nktjg8lEe5tAjNo9/2YEk7Qw/cUqbQLgRtv1Ak4F2z0PegM5hrleuQHxdamlD3aFr4w12TcqdUqkxGgPrBSqvElNQYIH774qhg6YUkYOipM0olxMVH/wXrpg/OKQa2+NXjVwWXhi4jlIOv3CjHi3PelCv3b4aaBiminAql4a6qmThbyu39uWIrQdFrDoxxntSTmLTWyPoNaSzjvJVmY0pB8MrtkBmEWG8GPWejr9uBv3Xvfho7rWkv8JSDHdEX0lQwYd8IQnF51eo5MuwYIA2nGdbL5TRvWNAv52AhPZt/mcI5wMbXan6UymB3m7TrfpvLwYukaovoHfVGklyoszYzxmx6fNz/FW/svycLYjn1ayYxHsC4fL7dpOX6XIfq7//QhRbaezE4tBA87r/OYq15o5q/0qz2vPtAM1zZPrae9Wqaja5u35e8D+QJsqsulnkxW0AVVIH8oaQTjXEzfbEn94uduFNS3AIpxWYfw2QY8jNTWonJwZqtbC5QJA2GXScYGQV0ENbmWObIDy6aaT0q17/UrpOa1DbCLnbjfwbZeC8YpP2XmkXHJruh++jZi1cFlTDaZGBZdAuE2cpBGcolxvGrnoVWHgTKYUDtTtFCxTJeXa0k9gAKLQ6i8lPJrlpPSkuw4sHVXcCmdYypLv0SEtNTUDE3ffdhP0XHX8fI39GeMltoM7tUrxkptYjprVtrY6KsKG94z9nopvseKFilc5G0ssoV2DflHsGwSM441Hg6E1/8B9nfcOgM75cAAAAAASUVORK5CYII=" alt="random"><figcaption>random</figcaption></figure><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAADEElEQVR4nAXBx5bbNhQAUOChEexFGlm2k3PyKfn/ffZxkhmJEkVSLCB67sV/lhOul8hQWl4ze03jjOhf/LFlj+49S4MA36rSmMqQxrk3W71C4Va6HE94nSQva2BijZi/L6ivpqaQsaEpLQtSVT7JEugjXT/cUeL3W9SBOLTD1v5L6H2C2iu7NhTRZojhiCe8cZMtefS0F2po2fIrGVIxxwgrfKNVO6+nDBHnuxNiuvg2whF82SBENNSltVL75jVmNCxoDb6bewro3KLeVPaAu4nihuupILBRPE5CPC64HWvooSo8l4CPm0hgrSSezjzPqbdxoh6/n4U2aLUSKLoIflzGnmXOWE3CiRMbYgi7LLaALAT5fOHGNyWkBOJM08nJjoPvyL5RdpkotR9uS+78bNCzK9DGWvxpkGek29/Suw9AamL+0aYzMUI/9t+dPz5I4I29u1pvqwPe+dhWG0WptlmHP9Gie4lLSNrFhQK/QIRyiNIJPjby2HALmKUwTHpGxDuedWDwzuOaKY8GfHo3884ld98tC5PGQg8OJK4UFaPp8jwcTV+QXSG+JHPRtUzKc4BAdWsOWT0ptku87nUIWcSekEj+67+CAd0n86T13xpNpSSfdqXtP6+UpyOdL7gjDBD2J16d8h8QR6W6nNvxN+uYLY4WNzSkYIJWBpAbbax9ruYjqb/Cka0cf8LyXBzQj+WojmeRHRFdb8m1zcdzjX4h7dPPmhgH0cSTZi17ekKnP5ZpuZe9K36iBevvnp49aNTseN9xmmcT7qsUh+VkrC3y7exmig0UnqwU2S8saCPJk5mf9gVKoHFfZywWTlU5JglTCXkmGc8Ph9ZWaZh3Jrw7q1yBt2WiR0rWjm7q1iwng1enrC3NLrR8OEg1e8ziPcSbx0mz5M9W4YJkNXIy7jvbARe6+jZgXwkNK6m2TG/NysiwyYOirTjDYtB05LVbciQpJ7VG4VYf4ZKjvBSCDHCOvlm0uiZDvRbjfpjhR7mU3tomCQqeDbwo2/FZeFshPWar8vl9zB/vsZqfGKt2+x84kOiYV1gIcgAAAABJRU5ErkJggg==" alt="optimized"><figcaption>optimized</figcaption></figure></section><h2>Recorded measurements</h2><pre>{
+  &quot;schema_version&quot;: 1,
+  &quot;software&quot;: &quot;0.1.0&quot;,
+  &quot;seed&quot;: 1,
+  &quot;environment&quot;: {
+    &quot;python&quot;: &quot;3.9.6&quot;,
+    &quot;numpy&quot;: &quot;1.26.4&quot;,
+    &quot;pillow&quot;: &quot;11.3.0&quot;
+  },
+  &quot;scope&quot;: &quot;synthetic fixed-feature study; not diffusion or artist-protection validation&quot;,
+  &quot;parameters&quot;: {
+    &quot;epsilon_pixels&quot;: 8,
+    &quot;steps&quot;: 80,
+    &quot;size&quot;: 32,
+    &quot;features&quot;: 32
+  },
+  &quot;optimization&quot;: {
+    &quot;initial_loss&quot;: 0.7177473875468243,
+    &quot;final_loss&quot;: 0.0021182471617993155,
+    &quot;history&quot;: [
+      0.7177473875468243,
+      0.03355719143436775,
+      0.019466643871872177,
+      0.013821853563558568,
+      0.011027642054476752,
+      0.009277305135986328,
+      0.008125050333163901,
+      0.007261215662278176,
+      0.006617987011225582,
+      0.006137349891631156,
+      0.005750806710145913,
+      0.005420326153158796,
+      0.005141781448724776,
+      0.004894489040897426,
+      0.004684013840160293,
+      0.0044961925999225235,
+      0.0043307024046957705,
+      0.00418679345321943,
+      0.00405575652669248,
+      0.003931048259765192,
+      0.0038171804566415283,
+      0.0037111568887555698,
+      0.0036109108201262774,
+      0.0035153309779936033,
+      0.0034271273788793258,
+      0.0033472635935916308,
+      0.0032738280312570385,
+      0.0032049566544358962,
+      0.003141780062928041,
+      0.0030849017038233166,
+      0.0030329869151067357,
+      0.002985731695402733,
+      0.0029420650561899657,
+      0.0029015824766947516,
+      0.002863037850608911,
+      0.002826760355795958,
+      0.002793289363236486,
+      0.0027627016595714107,
+      0.002733047339224632,
+      0.0027042093280750983,
+      0.0026776157603744504,
+      0.0026526358299201872,
+      0.0026281752262173894,
+      0.002604371252786049,
+      0.002580884452515664,
+      0.0025578151291257467,
+      0.0025359906221140913,
+      0.002515418421244806,
+      0.0024953205015852175,
+      0.002476038634306359,
+      0.0024574767607333107,
+      0.0024392759372743296,
+      0.002421575467889865,
+      0.0024046898698821383,
+      0.0023886998867443322,
+      0.0023735534793227556,
+      0.002359215582123676,
+      0.0023453639533797628,
+      0.002331663795818433,
+      0.0023181295819332177,
+      0.0023050259817371803,
+      0.002292533913958607,
+      0.00228023749012446,
+      0.0022684640462366148,
+      0.0022575866669705025,
+      0.002247101141871541,
+      0.0022368575434287548,
+      0.0022267341860609715,
+      0.0022170072222906217,
+      0.0022075449329043997,
+      0.002198193890071724,
+      0.0021889159042542414,
+      0.0021800403747904472,
+      0.0021716247353479514,
+      0.002163403238236139,
+      0.0021553276304251525,
+      0.002147446805297081,
+      0.0021398176647244157,
+      0.002132400804274066,
+      0.0021252175388485166,
+      0.0021182471617993155
+    ]
+  },
+  &quot;images&quot;: {
+    &quot;source&quot;: {
+      &quot;sha256&quot;: &quot;0b0aabc13f6c1513175fa2e6a30c9ae50d6cf70347da0a894a8404f30603d72f&quot;,
+      &quot;linf&quot;: 0.0,
+      &quot;rmse&quot;: 0.0,
+      &quot;psnr_db&quot;: null,
+      &quot;identical&quot;: true,
+      &quot;target_feature_distance&quot;: 0.8471997329714076
+    },
+    &quot;target&quot;: {
+      &quot;sha256&quot;: &quot;94acbb33a26c0b0cc34c3867049e26d3eca0ef4f00f173918146ef5274fb90a8&quot;,
+      &quot;linf&quot;: 0.4156862745098039,
+      &quot;rmse&quot;: 0.17101688243351287,
+      &quot;psnr_db&quot;: 15.339220296740963,
+      &quot;identical&quot;: false,
+      &quot;target_feature_distance&quot;: 0.0
+    },
+    &quot;random&quot;: {
+      &quot;sha256&quot;: &quot;342965069f8954508faeca27ff9a19a097c31e95b3fa0c3cf629b9a3752401e5&quot;,
+      &quot;linf&quot;: 0.0313725490196079,
+      &quot;rmse&quot;: 0.018689830407710325,
+      &quot;psnr_db&quot;: 34.567892788185524,
+      &quot;identical&quot;: false,
+      &quot;target_feature_distance&quot;: 0.858561074044043
+    },
+    &quot;optimized&quot;: {
+      &quot;sha256&quot;: &quot;0e30e213d28bceffcdad86a64b0d216917b3bcdf8ec73c159be873e533f23a28&quot;,
+      &quot;linf&quot;: 0.0313725490196079,
+      &quot;rmse&quot;: 0.029444171280823238,
+      &quot;psnr_db&quot;: 30.620013291637722,
+      &quot;identical&quot;: false,
+      &quot;target_feature_distance&quot;: 0.046148618163232506
+    }
+  },
+  &quot;transformations&quot;: {
+    &quot;source&quot;: {
+      &quot;jpeg85&quot;: {
+        &quot;linf&quot;: 0.04313725490196085,
+        &quot;rmse&quot;: 0.012829073837374161,
+        &quot;psnr_db&quot;: 37.83609390576143,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.8560350629403491
+      },
+      &quot;resize_half&quot;: {
+        &quot;linf&quot;: 0.050980392156862786,
+        &quot;rmse&quot;: 0.015258214205158094,
+        &quot;psnr_db&quot;: 36.3299258495481,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.8330106774608015
+      },
+      &quot;median3&quot;: {
+        &quot;linf&quot;: 0.05490196078431375,
+        &quot;rmse&quot;: 0.014306777960710454,
+        &quot;psnr_db&quot;: 36.88916325973434,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.8507545193131321
+      }
+    },
+    &quot;random&quot;: {
+      &quot;jpeg85&quot;: {
+        &quot;linf&quot;: 0.06274509803921569,
+        &quot;rmse&quot;: 0.020736148756317716,
+        &quot;psnr_db&quot;: 33.66543800541049,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.8788618229774723
+      },
+      &quot;resize_half&quot;: {
+        &quot;linf&quot;: 0.05490196078431375,
+        &quot;rmse&quot;: 0.01613789592632427,
+        &quot;psnr_db&quot;: 35.84306179271829,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.8346109336476277
+      },
+      &quot;median3&quot;: {
+        &quot;linf&quot;: 0.07058823529411762,
+        &quot;rmse&quot;: 0.01742783219081488,
+        &quot;psnr_db&quot;: 35.17513260905431,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.8459210060275308
+      }
+    },
+    &quot;optimized&quot;: {
+      &quot;jpeg85&quot;: {
+        &quot;linf&quot;: 0.09411764705882353,
+        &quot;rmse&quot;: 0.03269831988083797,
+        &quot;psnr_db&quot;: 29.709491237452816,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.17922530964028865
+      },
+      &quot;resize_half&quot;: {
+        &quot;linf&quot;: 0.06274509803921569,
+        &quot;rmse&quot;: 0.018080860923047042,
+        &quot;psnr_db&quot;: 34.85561788736021,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.7457289515693215
+      },
+      &quot;median3&quot;: {
+        &quot;linf&quot;: 0.0823529411764706,
+        &quot;rmse&quot;: 0.022983414380837917,
+        &quot;psnr_db&quot;: 32.771709054637135,
+        &quot;identical&quot;: false,
+        &quot;target_feature_distance&quot;: 0.683330774818625
+      }
+    }
+  },
+  &quot;limitations&quot;: [
+    &quot;Random linear encoder; no semantic pretrained model.&quot;,
+    &quot;No perceptual study; pixel bounds do not establish invisibility.&quot;,
+    &quot;Transformation distances do not prove training-time robustness.&quot;,
+    &quot;Single seed is not statistical evidence of generality.&quot;
+  ],
+  &quot;training&quot;: {
+    &quot;train_count&quot;: 32,
+    &quot;test_count&quot;: 80,
+    &quot;modified_count&quot;: 8,
+    &quot;labels_unchanged&quot;: true,
+    &quot;model&quot;: &quot;ridge classifier on fixed random features&quot;,
+    &quot;arms&quot;: {
+      &quot;clean&quot;: {
+        &quot;overall&quot;: 1.0,
+        &quot;source_class&quot;: 1.0,
+        &quot;target_class&quot;: 1.0
+      },
+      &quot;random&quot;: {
+        &quot;overall&quot;: 1.0,
+        &quot;source_class&quot;: 1.0,
+        &quot;target_class&quot;: 1.0
+      },
+      &quot;optimized&quot;: {
+        &quot;overall&quot;: 0.9,
+        &quot;source_class&quot;: 0.975,
+        &quot;target_class&quot;: 0.825
+      }
+    }
+  }
+}</pre></html>
